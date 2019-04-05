@@ -1,4 +1,4 @@
-node {
+1node {
    stage("checkout")
    {
       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/monishagowthami/java_repo.git']]]) 
@@ -9,7 +9,7 @@ node {
    }
    stage("unit testing")
    {
-       echo "Test completed"
+       echo "Test1 completed"
    }
    stage("Deploy")
    {
