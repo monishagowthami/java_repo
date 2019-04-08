@@ -1,0 +1,10 @@
+node {
+   stage("checkout")
+   {
+       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/monishagowthami/java_repo.git']]])
+   }
+   stage("build")
+   {
+       echo "build"
+   }
+}
